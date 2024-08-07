@@ -1,4 +1,4 @@
- body{
+    body{
         background-color: #a205b194;
 }
     body{
@@ -17,3 +17,9 @@
         text-shadow: rgb(0, 0, 0);
     }
     
+    section{
+        border-radius: 10px;
+    }
+    section{
+        border-color: black;
+    }

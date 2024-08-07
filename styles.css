@@ -1,22 +1,15 @@
     body{
         background-color: #a205b194;
-}
-    body{
+        font-size: 80px;
         text-align: center;
-    }
-    body{
         font-family: helvetica;
     }
-    body{
-        font-size: 40px;
-    }
-    body{
-        text-shadow: rgb(0, 0, 0);
-    }
-    
-    main{
-        border-radius: 10px;
-    }
-    main{
-        border-color: black;
-    }
+   main{
+    border-radius: 20px;
+    background-color: black;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: rgb(0, 0, 0)
+   }

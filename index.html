@@ -17,7 +17,7 @@
             var dia = document.getElementById('dia').value.toLowerCase();
             var diasUteis = ['segunda', 'terça', 'quarta', 'quinta', 'sexta'];
             var resultado = diasUteis.includes(dia) ? '-feira É um dia útil.' : 'Não é um dia útil.';
-            document.getElementById('resultado').innerHTML = <strong>resultado</strong>;
+            document.getElementById('resultado').innerHTML = `<strong> &{resultado}</strong>`;
         }
     </script>
 </html>

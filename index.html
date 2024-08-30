@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>java</title>
+    <title>Dia da Semana</title>
+    <script>
+        function verificarDia() {
+            const dia = document.getElementById('dia').value.toLowerCase();
+            const diasUteis = ['segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira'];
+            const resultado = diasUteis.includes(dia) ? 'É um dia útil.' : 'Não é um dia útil.';
+            document.getElementById('resultado').innerText = resultado;
+        }
+    </script>
 </head>
-<body>    
-<header>
-<h1>Atividade em HTML,CSS e JS</h1>
-</header>
-<main>
-        <section>
-            <h2>Conteúdo 1</h2>
-                <P>Este é o primeiro conteúdo da página</P>
-        </section>
-        <section>
-            <h2>Conteúdo 2</h2>
-            <p>Este é o segundo conteúdo da página</p>
-        </section>
-</main>
-<h6>Espero que tenha gostado</h6>
-
-
+<body>
+    <h1>Verificar Dia da Semana</h1>
+    <label for="dia">Digite o dia da semana:</label>
+    <input type="text" id="dia">
+    <button onclick="verificarDia()">Verificar</button>
+    <p id="resultado"></p>
 </body>
- 
 </html>

@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dia da Semana</title>
-     <link rel="stylesheet" href="styles.css">
+    <title>Verificar Aprovação</title>
 </head>
 <body>
-    <h1>Verificar Dia da Semana</h1>
-    <label for="dia">Digite o dia da semana:</label>
-    <input type="text" id="dia">
-    <button onclick="verificarDia()">Verificar</button>
+    <h1>Verificar Aprovação Escolar</h1>
+    <label>Nota 1: <input type="number" id="nota1"></label><br>
+    <label>Nota 2: <input type="number" id="nota2"></label><br>
+    <label>Nota 3: <input type="number" id="nota3"></label><br>
+    <button onclick="calcularMedia()">Verificar</button>
     <p id="resultado"></p>
-     <script>
-        function verificarDia() {
-            var dia = document.getElementById('dia').value.toLowerCase();
-            var diasUteis = ['segunda', 'terça', 'quarta', 'quinta', 'sexta'];
-            var resultado = diasUteis.includes(dia) ? '-feira É um dia útil.' : 'Não é um dia útil.';
-            document.getElementById('resultado').innerHTML =resultado;
+
+    <script>
+        function calcularMedia() {
+            const n1 = parseFloat(document.getElementById('nota1').value);
+            const n2 = parseFloat(document.getElementById('nota2').value);
+            const n3 = parseFloat(document.getElementById('nota3').value);
+            if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+                alert("Insira todas as notas.");
+                return;
+            }
+            const media = (n1 + n2 + n3) / 3;
+            document.getElementById('resultado').textContent = 
+                media >= 6 ? `Aprovado com média ${media.toFixed(2)}` : `Reprovado com média ${media.toFixed(2)}`;
         }
     </script>
-</html>
-
 </body>
 </html>

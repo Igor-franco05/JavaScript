@@ -14,17 +14,17 @@
     <p id="resultado"></p>
 
     <script>
-        function calcularMedia() {
-            const n1 = parseFloat(document.getElementById('nota1').value);
-            const n2 = parseFloat(document.getElementById('nota2').value);
-            const n3 = parseFloat(document.getElementById('nota3').value);
+        function calcular() {
+            var n1 = parseFloat(document.getElementById('nota1').value);
+            var n2 = parseFloat(document.getElementById('nota2').value);
+            var n3 = parseFloat(document.getElementById('nota3').value);
             if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
                 alert("Insira todas as notas.");
                 return;
             }
-            const media = (n1 + n2 + n3) / 3;
+            var media = (n1 + n2 + n3) / 3;
             document.getElementById('resultado').textContent = 
-                media >= 6 ? `Aprovado com média ${media.toFixed(2)}` : `Reprovado com média ${media.toFixed(2)}`;
+                media >= 6 ? `Aprovado: media ${media.toFixed(2)}` : `Reprovado: media ${media.toFixed(2)}`;
         }
     </script>
 </body>
